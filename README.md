@@ -1,5 +1,7 @@
 # anymyst
 
-a [myst markdown](https://mystmd.org/) directive for rendering [anywidgets](https://github.com/manzt/anywidget)
+A collection of ESM widgets for use with Curvenote `any:bundle` directive.
 
-here be dragons 🐉
+- [/widgets/vizarr-viewer.js](/widgets/vizarr-viewer.js)
+
+The starting point for this was Trevor's [anymyst](https://github.com/manzt/anymyst) repo from SciPy 2024 sprints.
