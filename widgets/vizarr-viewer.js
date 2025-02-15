@@ -6,6 +6,7 @@ export default {
     console.debug('vizarr-viewer:', el);
     console.debug('vizarr-viewer:', model.get('height'));
     console.debug('vizarr-viewer:', model.get('source'));
+    console.debug('vizarr-viewer:', model.get('menuOpen'));
 
     let div = document.createElement('div');
     Object.assign(div.style, {
@@ -13,11 +14,8 @@ export default {
       backgroundColor: 'black',
     });
     // hard code closed for now
-    console.debug('vizarr-viewer: creating viewer...');
-    let viewer = await vizarr.createViewer(div, { menuOpen: true });
-    console.debug('vizarr-viewer: adding image...');
+    let viewer = await vizarr.createViewer(div, { menuOpen: !!model.get('menuOpen') ?? false });
     viewer.addImage({ source: model.get('source') });
-    console.debug('vizarr-viewer: appending to el...');
     el.appendChild(div);
     console.debug('vizarr-viewer: done');
     return () => viewer.destory?.();
