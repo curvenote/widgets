@@ -1,3 +1,4 @@
+// https://github.com/hms-dbmi/vizarr
 import * as vizarr from 'https://hms-dbmi.github.io/vizarr/index.js';
 
 export default {
@@ -13,7 +14,7 @@ export default {
     });
     // hard code closed for now
     console.debug('vizarr-viewer: creating viewer...');
-    let viewer = await vizarr.createViewer(div, { menuOpen: false });
+    let viewer = await vizarr.createViewer(div, { menuOpen: true });
     console.debug('vizarr-viewer: adding image...');
     viewer.addImage({ source: model.get('source') });
     console.debug('vizarr-viewer: appending to el...');
