@@ -1,6 +1,4 @@
-# anymyst
-
-A collection of ESM widgets for use with Curvenote `any:bundle` directive.
+A collection of ESM widgets for use with Curvenote `any:bundle` directives.
 
 - [/widgets/vizarr-viewer.js](/widgets/vizarr-viewer.js)
 
