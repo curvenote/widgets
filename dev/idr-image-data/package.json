@@ -7,7 +7,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "serve": "npx http-server --cors dist",
+    "serve": "npx http-server ./dist --cors",
     "deploy": "mkdir -p ../../widgets/idr-image-data; cp -r dist/* ../../widgets/idr-image-data"
   },
   "keywords": [],
