@@ -1,0 +1,15 @@
+version: 1
+project:
+  title: IDR Image Data Card
+  id: 027bbdbd-idr-image-data-card
+site:
+  title: IDR Image Data Card
+  options:
+    logo_text: IDR Image Data Card
+    twitter: stevejpurves
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://curvenote.com/docs/web
+  domains:
+    - stevejpurves.curve.space
