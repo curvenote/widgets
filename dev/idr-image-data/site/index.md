@@ -1,31 +1,18 @@
 ---
-title: widgets
+title: Bringing Microscopy Data Forward
 ---
 
-# Usage
-
-The following will start a local http server to serve up the widget bundle
-
-```sh
-npm install
-npm run serve
-```
-
-# Widget
-
-On this page there should be at least a placeholder block for the `any:bundle` widget.
+## Zebrafish Embryo
 
 ::::{figure}
-:::{any:bundle} https://curvenote.github.io/widgets/widgets/idr-image-data/widget.js
+:label: fig-zebra
+:::{any:bundle} https://curvenote.github.io/widgets/widgets/vizarr-viewer.js
+:class: w-full
 
-{ "imageId": "4495402" }
+{ "source": "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.1/4495402.zarr", "height": "600px" }
 
 :::
+
+This is an image of a ZebraFish Embryo **([Dataset ID: 4495402](#fig:4495402))** from a public dataset on the [Image Data Resource](https://idr.openmicroscopy.org/webclient/?show=project-504) served directly from the `https://uk1s3.embassy.ebi.ac.uk/idr/zarr` buckets.
+
 ::::
-
-To see the widget rendered in full, view the page in a Curvenote theme. If needed serve this
-content in headless mode:
-
-```sh
-cn start --headless
-```

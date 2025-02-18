@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { AnyModel } from './model';
 import { ImageDataResponse } from './types';
 import { format } from 'date-fns';
@@ -43,7 +43,7 @@ function ImageDataCard({ imageId }: { imageId: string }) {
   const [imageData, setImageData] = React.useState<ImageDataResponse | null>(null);
   const [error, setError] = React.useState<any>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!imageId) {
       setError('No image Id provided');
       return;
@@ -73,122 +73,127 @@ function ImageDataCard({ imageId }: { imageId: string }) {
   const timeStamp = format(new Date(meta.imageTimestamp * 1000), 'MMM dd, yyyy HH:mm');
 
   return (
-    <div className="relative flex flex-col w-full space-y-4 overflow-hidden border rounded-lg shadow-lg lg:space-x-4 lg:flex-row text-neutral-900 border-black-100">
-      <div className="mb-1 grow-1 lg:basis-1/2">
-        <div
-          className="h-[240px] bg-cover bg-gray-500 bg-clip-border"
-          style={{ backgroundImage: `url(${IDR_THUMBNAIL}${imageId})` }}
-        ></div>
-        <div>
-          <SlimHeading heading="image details" />
-          <div className="flex flex-col p-2 space-y-2">
-            <div className="flex items-center space-x-1">
-              <a
-                className="inline-flex font-semibold grow"
-                href={`https://idr.openmicroscopy.org/webclient/search/?search_query=${imageId}`}
-              >
-                <div className="flex items-center space-x-2">
-                  <div>{meta.imageName}</div>
-                  <ExternalLink size={14} />
-                </div>
-              </a>
-              <div
-                className="pl-2 text-sm border-l-2 text-neutral-500 border-l-sky-800"
-                title={timeStamp}
-              >
-                {dateStamp}
-              </div>
-            </div>
-            <div className="text-sm text-neutral-500">
-              {meta.imageDescription || meta.imageDescription.length ? (
-                <span>{meta.imageDescription}</span>
-              ) : (
-                <span className="text-sm text-neutral-300">no description</span>
-              )}
-            </div>
-            <div className="flex items-center mt-1 space-x-1 text-xs font-light">
-              {meta.imageAuthor && (
-                <div className="px-[10px] py-[2px] border text-neutral-500 rounded-full border-neutral-500 bg-neutral-200">
-                  {meta.imageAuthor?.toLocaleLowerCase()}
-                </div>
-              )}
-              {meta.pixelsType && (
-                <div className="px-[10px] py-[2px] text-blue-700 border border-blue-600 rounded-full bg-blue-200">
-                  {meta.pixelsType?.toLocaleLowerCase()}
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="grow-1 lg:basis-1/2">
-        <div>
-          <SlimHeading heading="dataset details" />
-          <div className="p-2 space-y-2">
-            <div className="flex items-center space-x-2">
-              <div className="pr-2 font-light border-r-2 text-neutral-500 border-r-neutral-500">
+    <div className="@container">
+      <div className="relative flex flex-col w-full space-y-4 overflow-hidden border rounded-lg shadow-lg @lg:space-x-4 @lg:flex-row text-neutral-900 border-black-100">
+        <div className="mb-1 grow-1 @lg:basis-1/2">
+          <div
+            className="h-[240px] bg-cover bg-center bg-gray-500 bg-clip-border"
+            style={{ backgroundImage: `url(${IDR_THUMBNAIL}${imageId})` }}
+          ></div>
+          <div>
+            <SlimHeading heading="image details" />
+            <div className="flex flex-col p-2 space-y-2">
+              <div className="flex items-center space-x-1">
                 <a
-                  className="flex items-center hover:underline"
-                  href={`${IDR_OME_CLIENT_DATASET}${meta.datasetId}`}
+                  className="inline-flex font-semibold grow"
+                  href={`https://idr.openmicroscopy.org/webclient/search/?search_query=${imageId}`}
+                  target="_blank"
                 >
-                  {meta.datasetId}{' '}
-                  <ExternalLink className="inline-flex mb-[1px] ml-[1px]" size={14} />
+                  <div className="flex items-center space-x-2">
+                    <div>{meta.imageName}</div>
+                    <ExternalLink size={14} />
+                  </div>
                 </a>
-              </div>
-              <div>{meta.datasetName}</div>
-            </div>
-            <div className="text-sm text-neutral-500">
-              {meta.datasetDescription ? (
-                <span>{meta.datasetDescription}</span>
-              ) : (
-                <span className="s text-neutral-300">no description</span>
-              )}
-            </div>
-          </div>
-        </div>
-        <div>
-          <SlimHeading heading="project details" />
-          <div className="p-2 space-y-2">
-            <div className="flex items-center space-x-2">
-              <div className="pr-2 font-light border-r-2 text-neutral-500 border-r-neutral-500">
-                <a
-                  className="flex items-center hover:underline"
-                  href={`${IDR_OME_CLIENT_PROJECT}${meta.projectId}`}
+                <div
+                  className="pl-2 text-sm border-l-2 text-neutral-500 border-l-sky-800"
+                  title={timeStamp}
                 >
-                  {meta.projectId}{' '}
-                  <ExternalLink className="inline-flex mb-[1px] ml-[1px]" size={14} />
-                </a>
+                  {dateStamp}
+                </div>
               </div>
-              <div>{meta.projectName}</div>
-            </div>
-            <div className="text-sm text-neutral-500">
-              {meta.projectDescription ? (
-                <div>{meta.projectDescription.replace('\n', ' ')}</div>
-              ) : (
-                <span className="s text-neutral-300">no description</span>
-              )}
+              <div className="text-sm text-neutral-500">
+                {meta.imageDescription || meta.imageDescription.length ? (
+                  <span>{meta.imageDescription}</span>
+                ) : (
+                  <span className="text-sm text-neutral-300">no description</span>
+                )}
+              </div>
+              <div className="flex items-center mt-1 space-x-1 text-xs font-light">
+                {meta.imageAuthor && (
+                  <div className="px-[10px] py-[2px] border text-neutral-500 rounded-full border-neutral-500 bg-neutral-200">
+                    {meta.imageAuthor?.toLocaleLowerCase()}
+                  </div>
+                )}
+                {meta.pixelsType && (
+                  <div className="px-[10px] py-[2px] text-blue-700 border border-blue-600 rounded-full bg-blue-200">
+                    {meta.pixelsType?.toLocaleLowerCase()}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <SlimHeading heading="technicals" />
-          <div className="grid grid-cols-2 gap-1 p-2 text-neutral-600">
-            <Expanable label="perms" data={perms} />
-            <Expanable label="channels" data={channels} />
-            <Expanable label="split_channel" data={split_channel} />
-            <Expanable label="rdefs" data={rdefs} />
-            <Expanable label="details" data={details} />
+        <div className="grow-1 @lg:basis-1/2">
+          <div>
+            <SlimHeading heading="dataset details" />
+            <div className="p-2 space-y-2">
+              <div className="flex items-center space-x-2">
+                <div className="pr-2 font-light border-r-2 text-neutral-500 border-r-neutral-500">
+                  <a
+                    className="flex items-center hover:underline"
+                    href={`${IDR_OME_CLIENT_DATASET}${meta.datasetId}`}
+                    target="_blank"
+                  >
+                    {meta.datasetId}{' '}
+                    <ExternalLink className="inline-flex mb-[1px] ml-[1px]" size={14} />
+                  </a>
+                </div>
+                <div>{meta.datasetName}</div>
+              </div>
+              <div className="text-sm text-neutral-500">
+                {meta.datasetDescription ? (
+                  <span>{meta.datasetDescription}</span>
+                ) : (
+                  <span className="s text-neutral-300">no description</span>
+                )}
+              </div>
+            </div>
+          </div>
+          <div>
+            <SlimHeading heading="project details" />
+            <div className="p-2 space-y-2">
+              <div className="flex items-center space-x-2">
+                <div className="pr-2 font-light border-r-2 text-neutral-500 border-r-neutral-500">
+                  <a
+                    className="flex items-center hover:underline"
+                    href={`${IDR_OME_CLIENT_PROJECT}${meta.projectId}`}
+                    target="_blank"
+                  >
+                    {meta.projectId}{' '}
+                    <ExternalLink className="inline-flex mb-[1px] ml-[1px]" size={14} />
+                  </a>
+                </div>
+                <div>{meta.projectName}</div>
+              </div>
+              <div className="text-sm text-neutral-500">
+                {meta.projectDescription ? (
+                  <div>{meta.projectDescription.replace('\n', ' ')}</div>
+                ) : (
+                  <span className="s text-neutral-300">no description</span>
+                )}
+              </div>
+            </div>
+          </div>
+          <div>
+            <SlimHeading heading="technicals" />
+            <div className="grid grid-cols-2 gap-1 p-2 text-neutral-600">
+              <Expanable label="perms" data={perms} />
+              <Expanable label="channels" data={channels} />
+              <Expanable label="split_channel" data={split_channel} />
+              <Expanable label="rdefs" data={rdefs} />
+              <Expanable label="details" data={details} />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="absolute justify-end font-mono text-[8px] bottom-1 right-2 text-neutral-700">
-        <a
-          className="hover:underline"
-          href="https://idr.openmicroscopy.org/about/api.html"
-          target="_blank"
-        >
-          IDR API
-        </a>
+        <div className="absolute justify-end font-mono text-[8px] bottom-1 right-2 text-neutral-700">
+          <a
+            className="hover:underline"
+            href="https://idr.openmicroscopy.org/about/api.html"
+            target="_blank"
+          >
+            IDR API
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -206,7 +211,7 @@ export function render({ model, el }: { model: AnyModel; el: HTMLElement }) {
     </div>
   );
 
-  const root = createRoot(el);
+  const root = ReactDOM.createRoot(el);
   root.render(<App />);
 }
 

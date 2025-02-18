@@ -2,6 +2,10 @@ version: 1
 project:
   title: IDR Image Data Card
   id: 027bbdbd-idr-image-data-card
+  toc:
+    - file: index.md
+    - file: datasets.md
+    - file: usage.md
 site:
   title: IDR Image Data Card
   options:
