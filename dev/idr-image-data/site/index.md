@@ -3,11 +3,11 @@ title: Bringing Microscopy Data Forward
 subtitle: Bringing dataset visualization into the narrative
 ---
 
-The following figures are all from datasets publicly available on the [Image Data Resource](https://idr.openmicroscopy.org). Rather than being screenshots they directly embed the full dataset using the HMS based Zarr viewer[1^] making them immediately accessible and explorable as part of the narrative.
+The following figures are all from datasets publicly available on the [Image Data Resource](https://idr.openmicroscopy.org). Rather than being screenshots they directly embed the full dataset using the HMS based Zarr viewer[^1] making them immediately accessible and explorable as part of the narrative.
 
 This is made possible via a lightweight plugin to the publishing system that allows research communities to create, maintain and use their own visualizations that match their datasets and needs.
 
-[1^]: The following examples use the [vizarr](https://github.com/hms-dbmi/vizarr) package from the Harvard Medical School.
+[^1]: The following examples use the [vizarr](https://github.com/hms-dbmi/vizarr) package from the Harvard Medical School.
 
 ## Zebrafish Embryo
 
