@@ -1,5 +1,6 @@
 ---
-title: Bringing Metadata Forward
+title: |
+  IDR: Bringing Metadata Forward
 subtitle: A curated catalog of datasets
 ---
 
@@ -10,6 +11,13 @@ The _IDR Image Data Cards_ below are build using standard React code and a light
 [^1]: The code for these cars is on https://github.com/curvenote/widgets along with more technical details.
 
 ## Image Data
+
+:::{any:bundle} https://curvenote.github.io/widgets/widgets/idr-image-data/widget.js
+:styles: https://curvenote.github.io/widgets/widgets/idr-image-data/widget.css
+
+{ "imageId": "4495402" }
+
+:::
 
 ::::{figure}
 :label: fig:data:4495402

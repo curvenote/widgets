@@ -1,15 +1,16 @@
 version: 1
 project:
-  title: IDR Image Data Card
+  title: Surfacing Microscopy Data
+  subtitle: Surfacing dataset visualization into the narrative
   id: 027bbdbd-idr-image-data-card
   toc:
     - file: index.md
     - file: datasets.md
     - file: usage.md
 site:
-  title: IDR Image Data Card
+  title: Surfacing Microscopy Data
   options:
-    logo_text: IDR Image Data Card
+    logo_text: Surfacing Microscopy Data
     twitter: stevejpurves
   nav: []
   actions:

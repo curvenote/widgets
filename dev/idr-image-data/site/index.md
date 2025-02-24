@@ -9,6 +9,21 @@ This is made possible via a lightweight plugin to the publishing system that all
 
 [^1]: The following examples use the [vizarr](https://github.com/hms-dbmi/vizarr) package from the Harvard Medical School.
 
+## Multicolor multiscale brain imaging
+
+::::{figure}
+:label: fig:9846152
+:::{any:bundle} https://curvenote.github.io/widgets/widgets/vizarr-viewer.js
+:class: w-full
+
+{ "source": "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0048A/9846152.zarr", "height": "600px" }
+
+:::
+
+This is an image of multicolor multiscale brain imaging from a public dataset on IDR **([Dataset ID: 9846152](#fig:data:9846152))**
+
+::::
+
 ## Zebrafish Embryo
 
 ::::{figure}
@@ -36,21 +51,6 @@ This is an image of a ZebraFish Embryo from a public dataset on the IDR **([Data
 :::
 
 This is an image of SARS-CoV-2 infected intestine organoids from a public dataset on IDR **([Dataset ID: 9822152](#fig:data:9822152))**
-
-::::
-
-## Multicolor multiscale brain imaging
-
-::::{figure}
-:label: fig:9846152
-:::{any:bundle} https://curvenote.github.io/widgets/widgets/vizarr-viewer.js
-:class: w-full
-
-{ "source": "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0048A/9846152.zarr", "height": "600px" }
-
-:::
-
-This is an image of multicolor multiscale brain imaging from a public dataset on IDR **([Dataset ID: 9846152](#fig:data:9846152))**
 
 ::::
 
