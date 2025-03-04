@@ -1,0 +1,18 @@
+version: 1
+project:
+  title: site
+  github: https://github.com/curvenote/widgets
+  id: c28c09fe-faaa-4e07-9772-7912d88c2fe2
+  plugins:
+    - lorem.mjs
+site:
+  title: site
+  options:
+    logo_text: site
+    twitter: stevejpurves
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://curvenote.com/docs/web
+  domains:
+    - stevejpurves.curve.space

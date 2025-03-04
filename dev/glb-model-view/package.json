@@ -1,0 +1,21 @@
+{
+  "name": "glb-model-view",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "serve": "npx http-server ./dist --cors -c-1",
+    "deploy": "mkdir -p ../../widgets/glb-model-view; cp -r dist/* ../../widgets/glb-model-view"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {}
+}
