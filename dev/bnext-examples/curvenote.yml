@@ -1,0 +1,20 @@
+version: 1
+project:
+  title: BNext Labs - Microscopy Viz
+  subtitle: In-article microscopy data visualizations using Curvenote+vizarr
+  id: f0b937c0-9f6c-11f0-b0c5-299fbb5b21f1
+  toc:
+    - file: index.md
+    - file: datasets.md
+    - file: usage.md
+site:
+  title: Surfacing Microscopy Data
+  options:
+    logo_text: Surfacing Microscopy Data
+    twitter: stevejpurves
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://curvenote.com/docs/web
+  domains:
+    - stevejpurves.curve.space
