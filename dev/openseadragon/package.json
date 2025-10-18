@@ -1,0 +1,35 @@
+{
+  "name": "openseadragon-widget",
+  "version": "1.0.0",
+  "description": "An any:bundle renderer for openseadragon",
+  "main": "widget.mjs",
+  "scripts": {
+    "compile": "tsc --noEmit",
+    "build": "tsup src/widget.ts --format esm --dts",
+    "dev": "tsup src/widget.ts --format esm --dts --watch",
+    "serve": "npx http-server ./dist --cors -c-1",
+    "deploy": "mkdir -p ../../widgets/openseadragon-widget; cp -r dist/* ../../widgets/openseadragon-widget"
+  },
+  "author": "Steve Purves <steve@curvenote.com>",
+  "license": "MIT",
+  "dependencies": {
+    "openseadragon": "^5.0.1",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/openseadragon": "^4.1.0",
+    "typescript": "^5.9.3",
+    "tsup": "^8.5.0"
+  },
+  "tsup": {
+    "entry": [
+      "src/widget.ts"
+    ],
+    "format": [
+      "esm"
+    ],
+    "noExternal": [
+      "openseadragon"
+    ]
+  }
+}

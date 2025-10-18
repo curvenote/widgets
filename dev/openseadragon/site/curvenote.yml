@@ -1,0 +1,15 @@
+version: 1
+project:
+  title: OpenSeadragon AnyBundle
+  github: https://github.com/curvenote/widgets
+  id: bbe03744-cc46-4807-bafb-d6a0cf9c5eff
+site:
+  title: OpenSeadragon AnyBundle
+  options:
+    logo_text: OpenSeadragon AnyBundle
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://curvenote.com/docs/web
+  domains:
+    - stevejpurves.curve.space

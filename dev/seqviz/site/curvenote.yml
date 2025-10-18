@@ -1,0 +1,15 @@
+version: 1
+project:
+  title: Example bundle with React & Tailwind
+  id: 027bbdbd-05ac-4b8d-a926-a5c18223438a
+site:
+  title: Example bundle with React & Tailwind
+  options:
+    logo_text: Example bundle with React & Tailwind
+    twitter: stevejpurves
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://curvenote.com/docs/web
+  domains:
+    - stevejpurves.curve.space
