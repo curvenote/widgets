@@ -1,25 +1,34 @@
-# Usage
+## SeqViz
 
-The following will start a local http server to serve up the widget bundle
+`any:bundle` renderer for the SeqViz library.
 
-```sh
-npm install
-npm run serve
-```
 
-# Widget
+### Example
 
-On this page there should be at least a placeholder block for the `any:bundle` widget.
-
-:::{any:bundle} http://localhost:8080/widget.js
-
-{}
-
+:::{lorem} 1
 :::
 
-To see the widget rendered in full, view the page in a Curvenote theme. If needed serve this
-content in headless mode:
+::::{figure}
+:label: fig:J23100
+:::{any:bundle} http://localhost:8080/widget.js
+{
+    "height": "400px",
+    "name": "J23100",
+    "seq": "TTGACGGCTAGCTCAGTCCTAGGTACAGTGCTAGC",
+    "annotations":[{ "name": "promoter", "start": 0, "end": 34, "direction": 1, "color": "blue" }]
+}
+:::
+Rendering the sequence `TTGACGGCTAGCTCAGTCCTAGGTACAGTGCTAGC` using SeqViz with the `any:bundle` directive below 👇.
+::::
 
-```sh
-cn start --headless
-```
+
+::::{code}
+:::{any:bundle} http://not-yet-deployed/widget.js
+{
+    "height": "400px",
+    "name": "J23100",
+    "seq": "TTGACGGCTAGCTCAGTCCTAGGTACAGTGCTAGC",
+    "annotations":[{ "name": "promoter", "start": 0, "end": 34, "direction": 1, "color": "blue" }]
+}
+:::
+::::

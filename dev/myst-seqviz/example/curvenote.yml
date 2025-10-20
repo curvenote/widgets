@@ -1,0 +1,17 @@
+version: 1
+project:
+  title: MyST SeqViz
+  github: https://github.com/curvenote/widgets
+  id: e59abc28-c62b-48d4-bdd0-c1c95bc05d5e
+  plugins:
+    - seqviz.mjs
+site:
+  title: MyST SeqViz
+  options:
+    logo_text: MyST SeqViz
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://curvenote.com/docs/web
+  domains:
+    - stevejpurves.curve.space

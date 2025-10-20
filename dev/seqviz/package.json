@@ -7,7 +7,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "serve": "npx http-server --cors dist",
+    "serve": "npx http-server ./dist --cors -c-1",
     "deploy": "mkdir -p ../../widgets/bundle-react-tailwind; cp -r dist/* ../../widgets/bundle-react-tailwind"
   },
   "keywords": [],

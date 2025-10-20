@@ -1,0 +1,40 @@
+{
+  "name": "myst-ext-segviz",
+  "version": "0.0.1",
+  "description": "SeqViz Plugin for MyST Markdown",
+  "type": "module",
+  "exports": "./dist/seqviz.mjs",
+  "types": "./dist/seqviz.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsup; cp dist/seqviz.mjs example/seqviz.mjs",
+    "dev": "concurrently \"tsup --watch\" \"cpx 'dist/**/*.mjs' example --verbose\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myst-ext/myst-ext-lorem.git"
+  },
+  "keywords": [
+    "seqviz",
+    "seqparse",
+    "myst markdown",
+    "biology"
+  ],
+  "author": "Steve Purves <steve@curvenote.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "cpx": "^1.5.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3",
+    "unist-builder": "^4.0.0"
+  },
+  "dependencies": {
+    "seqparse": "^0.2.1"
+  }
+}

@@ -2,6 +2,8 @@ version: 1
 project:
   title: Example bundle with React & Tailwind
   id: 027bbdbd-05ac-4b8d-a926-a5c18223438a
+  plugins:
+    - lorem.mjs
 site:
   title: Example bundle with React & Tailwind
   options:
