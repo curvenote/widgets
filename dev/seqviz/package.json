@@ -8,7 +8,7 @@
     "build": "vite build",
     "dev": "vite",
     "serve": "npx http-server ./dist --cors -c-1",
-    "deploy": "mkdir -p ../../widgets/bundle-react-tailwind; cp -r dist/* ../../widgets/bundle-react-tailwind"
+    "deploy": "cp -r ./dist/widget.js ../../widgets/seqviz.js"
   },
   "keywords": [],
   "author": "",

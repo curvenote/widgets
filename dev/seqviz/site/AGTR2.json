@@ -1,0 +1,154 @@
+{
+  "annotations": [
+    {
+      "direction": 1,
+      "end": 0,
+      "name": "AGTR2",
+      "start": 0,
+      "type": "gene"
+    },
+    {
+      "direction": 1,
+      "end": 73,
+      "name": "AGTR2",
+      "start": 0,
+      "type": "exon"
+    },
+    {
+      "direction": 1,
+      "end": 133,
+      "name": "AGTR2",
+      "start": 73,
+      "type": "exon"
+    },
+    {
+      "direction": 1,
+      "end": 0,
+      "name": "AGTR2",
+      "start": 133,
+      "type": "exon"
+    },
+    {
+      "direction": 1,
+      "end": 159,
+      "name": "AGTR2",
+      "start": 156,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 1260,
+      "name": "AGTR2",
+      "start": 168,
+      "type": "CDS"
+    },
+    {
+      "direction": 1,
+      "end": 180,
+      "name": "AGTR2",
+      "start": 177,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 207,
+      "name": "AGTR2",
+      "start": 204,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 240,
+      "name": "AGTR2",
+      "start": 237,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 255,
+      "name": "AGTR2",
+      "start": 252,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 270,
+      "name": "AGTR2",
+      "start": 267,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 378,
+      "name": "AGTR2",
+      "start": 303,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 480,
+      "name": "AGTR2",
+      "start": 408,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 588,
+      "name": "AGTR2",
+      "start": 510,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 711,
+      "name": "AGTR2",
+      "start": 645,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 864,
+      "name": "AGTR2",
+      "start": 786,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 1011,
+      "name": "AGTR2",
+      "start": 939,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 1128,
+      "name": "AGTR2",
+      "start": 1050,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 1167,
+      "name": "AGTR2",
+      "start": 1137,
+      "type": "misc_feature"
+    },
+    {
+      "direction": 1,
+      "end": 2843,
+      "name": "AGTR2",
+      "start": 2837,
+      "type": "regulatory"
+    },
+    {
+      "direction": 1,
+      "end": 0,
+      "name": "AGTR2",
+      "start": 2861,
+      "type": "polyA_site"
+    }
+  ],
+  "name": "NM_000686",
+  "seq": "gctattacgtcccagcgtctgagagaacgagtaagcacagaattcaaagcattctgcagcctgaattttgaaggagtgtgtttaggcactaagcaagctgatttatgataactgctttaaacttcaacaaccaaaggcataagaactaggagctgctgacatttcaatatgaagggcaactccacccttgccactactagcaaaaacattaccagcggtcttcacttcgggcttgtgaacatctctggcaacaatgagtctaccttgaactgttcacagaaaccatcagataagcatttagatgcaattcctattctttactacattatatttgtaattggatttctggtcaatattgtcgtggttacactgttttgttgtcaaaagggtcctaaaaaggtttctagcatatacatcttcaacctcgctgtggctgatttactccttttggctactcttcctctatgggcaacctattattcttatagatatgactggctctttggacctgtgatgtgcaaagtttttggttcttttcttaccctgaacatgtttgcaagcattttttttatcacctgcatgagtgttgataggtaccaatctgtcatctacccctttctgtctcaaagaagaaatccctggcaagcatcttatatagttccccttgtttggtgtatggcctgtttgtcctcattgccaacattttattttcgagacgtcagaaccattgaatacttaggagtgaatgcttgcattatggctttcccacctgagaaatatgcccaatggtcagctgggattgccttaatgaaaaatatccttggttttattatccctttaatattcatagcaacatgctattttggaattagaaaacacttactgaagacgaatagctatgggaagaacaggataacccgtgaccaagtcctgaagatggcagctgctgttgttctggccttcatcatttgctggcttcccttccatgttctgaccttcctggatgctctggcctggatgggtgtcattaatagctgcgaagttatagcagtcattgacctggcacttccttttgccatcctcttgggattcaccaacagctgcgttaatccgtttctgtattgttttgttggaaaccggttccaacagaagctccgcagtgtgtttagggttccaattacttggctccaagggaaaagagagagtatgtcttgccggaaaagcagttctcttagagaaatggagacctttgtgtcttaaacgtgagagcaaaatgcatgtaatcaacatggctacttgctttgaggctcaccagaattatttttaagtggttttaataaaataataaaatttcccctaatcttttctgaatcttctgaaaccaaatgtaactatgttttatcgtccagtgactttcaggaattgcccattgtttttctgatatgtttgtacaagattgtcattagtgagacatatttacaacctagaagtaactggtgatatatctcaaattgtaattaataatagattgtgaataatgatttggggattcagatttctctttgaaacatgcttgtgtttcttagtggggttttatatccatttttatcaggatttcctcttgaaccagaaccagtctttcaactcattgcatcatttacaagacaacattgtaagagagatgagcacttctaagttgagtatattataatagattagtactggattattcaggctttaggcatatgcttctttaaaaaagctataaattatattcctcttgcatttcacttgagtggaggtttatagttaatctataactacatattgaatagggctaggaatatagattaaatcatactcctatgctttagcttatttttacagttatagaaagcaagatgtactataacatagaattgcaatctataatatttgtgtgttcactaaactctgaataagcactttttaaaaaactttctactcattttaatgattgtttaaaggtttctattttctctgatacttttttgaaatcagtaaacactgtgtattgttgtaaaatgtaaaggtcacttttcacatccttgactttttagatgtgctgctttgatatataggacattgatttgatttttattattaatgctttggttctgggttgtttcctaaaatatctgggtggcttaaaaaaaactctttaacttgtaataaacccttaactggcataggaaatggtatccagaatggaattttgctacatggggtctgggtgggggcaaagagacccagtcaattacatgtttggtaccaagaaaggaacctgtcagggcagtacaatgtgactttgaaaatatataccgtgggggtagttttaccctatatctataaacactgtttgttccagaatctgtatgattctatggagctattttaaaccaattgcaggtctagatacctccttctcagcactattaaagctcctaagttagaggagtgcctaaaactgagttacctaaagtttacttacattaaagtatgaatattaattttagaaatttgagactttattctgtaccagccctgtataataacaggttatctaggaccttcctctgaggtaggtctaaatactgatctctgaggcggaactaacgttttggggactcagcatctctgccaggttccaggattatagacagaagagtcctgtcataccactttctggaaaagtcctaatttcatgtaatccttttattttcaataaaaacaaatagctaaatgtataaccaactatgatgttatgttttcaataattttgtaaaacagctcatataaataaaatttttaattggaagaaca",
+  "type": "dna"
+}

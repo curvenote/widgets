@@ -1,4 +1,5 @@
-import seqparse from "seqparse";
+import * as seqparse from "seqparse";
+import { readFile } from "node:fs/promises";
 
 export const seqparseTransform = {
   name: "seqviz-seqparse",
@@ -6,20 +7,24 @@ export const seqparseTransform = {
   stage: "document",
   plugin: (_, utils) => async (node) => {
     const nodes = utils.selectAll("block[kind='seqviz']", node) ?? [];
-    console.log("NODES", nodes.length);
     await Promise.all(
       nodes.map(async (seqvizNode) => {
         const { file, class: className, height } = seqvizNode.data;
-        const { name, type, seq, annotations } = await seqparse(file);
+        const fileContent = await readFile(file, "utf8");
+        const data = seqparse.parseFile(fileContent);
+        const { name, type, seq, annotations } = data[0] ?? {};
         seqvizNode.data = {
           ...seqvizNode.data,
-          name,
-          type,
-          seq,
-          annotations,
-          class: className,
-          height,
+          json: {
+            name,
+            type,
+            seq,
+            annotations,
+            class: className,
+            height,
+          },
         };
+        seqvizNode.kind = "any:bundle";
       })
     );
   },

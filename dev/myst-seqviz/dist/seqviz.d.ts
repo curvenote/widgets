@@ -72,6 +72,7 @@ declare const plugin: {
         } & {
             kind: string;
             data: {
+                import: string;
                 file: any;
                 class: any;
                 height: any;

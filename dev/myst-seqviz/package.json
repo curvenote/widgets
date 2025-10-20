@@ -13,7 +13,8 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsup; cp dist/seqviz.mjs example/seqviz.mjs",
-    "dev": "concurrently \"tsup --watch\" \"cpx 'dist/**/*.mjs' example --verbose\""
+    "dev": "concurrently \"tsup --watch\" \"cpx 'dist/**/*.mjs' example --verbose --watch\"",
+    "deploy": "cp -r ./dist/seqviz.mjs ../../directives/seqviz.mjs"
   },
   "repository": {
     "type": "git",

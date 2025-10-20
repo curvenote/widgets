@@ -15,6 +15,7 @@ export const seqVizDirective = {
       {
         kind: "seqviz",
         data: {
+          import: "https://curvenote.github.io/widgets/widgets/seqviz.js",
           file: data.arg,
           class: data.options?.class ?? "",
           height: data.options?.height ?? "600px",
