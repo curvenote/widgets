@@ -54,6 +54,17 @@ This is a Cephla dataset again, now rendered in the `zarr` directive.
 
 ::::
 
+## SeqViz using Genebank files
+
+::::{figure}
+:::{seqviz} ./plamGFP-PURE.gb
+:height: 600px
+:::
+
+A SeqViz widget rendering a sequence from the `plamGFP-PURE.gb` file. If this was available on Genebank, the Accession alone could have also been used.
+::::
+
+
 ## Additional Examples
 
 We have some additional examples that pull microscopy data from the IDR data archive, visualizing them in the same way but also using other custom widgets to link out to those datasets. The custom widgets provide interactive data cards summarizing the metadata for each dataset.
