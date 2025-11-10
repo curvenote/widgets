@@ -15,7 +15,8 @@
     "height": "400px",
     "name": "J23100",
     "seq": "TTGACGGCTAGCTCAGTCCTAGGTACAGTGCTAGC",
-    "annotations":[{ "name": "promoter", "start": 0, "end": 34, "direction": 1, "color": "blue" }]
+    "annotations":[{ "name": "promoter", "start": 0, "end": 34, "direction": 1, "color": "blue" }],
+    "viewer": "both_flip"
 }
 :::
 Rendering the sequence `TTGACGGCTAGCTCAGTCCTAGGTACAGTGCTAGC` using SeqViz with the `any:bundle` directive below 👇.
