@@ -60,10 +60,6 @@ var seqVizDirective = {
       type: String,
       doc: "The viewer to use (linear, circular, both, both_flip).`"
     },
-    zoom: {
-      type: Object,
-      doc: "The zoom to apply to the visualization e.g. ({ circular: 100, linear: 100 }).`"
-    },
     style: { type: Object, doc: "The style to apply to the visualization.`" }
   },
   // TODO: validate(data, vfile) {},
@@ -79,7 +75,6 @@ var seqVizDirective = {
           class: data.options?.class ?? "",
           height: data.options?.height ?? "600px",
           viewer: data.options?.viewer ?? "both",
-          zoom: data.options?.zoom ?? { circular: 0, linear: 50 },
           style: data.options?.style ?? {}
         }
       },

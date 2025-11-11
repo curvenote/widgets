@@ -26,7 +26,6 @@ export function render({ model, el }: { model: AnyModel; el: HTMLElement }) {
     | undefined;
   const enzymes = model.get("enzymes") as SeqVizProps["enzymes"] | undefined;
   const bpColors = model.get("bpColors") as SeqVizProps["bpColors"] | undefined;
-  const zoom = model.get("zoom") as SeqVizProps["zoom"] | undefined;
   const style = model.get("style") as Record<string, unknown> | undefined;
   const annotations = model.get("annotations") as
     | SeqVizProps["annotations"]
@@ -44,7 +43,6 @@ export function render({ model, el }: { model: AnyModel; el: HTMLElement }) {
     enzymes,
     bpColors,
     viewer,
-    zoom,
     style,
   };
   console.debug("SeqViz Data", data);
@@ -63,7 +61,6 @@ export function render({ model, el }: { model: AnyModel; el: HTMLElement }) {
         seqType={data.seqType}
         viewer={data.viewer}
         style={data.style}
-        zoom={data.zoom}
       />
     </div>
   );

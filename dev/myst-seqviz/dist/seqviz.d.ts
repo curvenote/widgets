@@ -24,10 +24,6 @@ declare const plugin: {
                 type: StringConstructor;
                 doc: string;
             };
-            zoom: {
-                type: ObjectConstructor;
-                doc: string;
-            };
             style: {
                 type: ObjectConstructor;
                 doc: string;
@@ -94,7 +90,6 @@ declare const plugin: {
                 class: any;
                 height: any;
                 viewer: any;
-                zoom: any;
                 style: any;
             };
         })[];

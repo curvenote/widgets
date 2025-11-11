@@ -18273,7 +18273,7 @@ function vf() {
   console.log("Widget initialized");
 }
 function gf({ model: ee, el: X }) {
-  console.log("SeqViz Widget rendering...", ee);
+  console.log("SeqViz Widget rendering...");
   const ie = ee.get("height") ?? "500px", K = ee.get("seqType"), oe = ee.get("name"), B = ee.get("seq"), Z = ee.get("viewer") ?? "both", m = ee.get("primers"), b = ee.get("highlights"), g = ee.get("translations"), p = ee.get("enzymes"), _ = ee.get("bpColors"), x = ee.get("zoom"), N = ee.get("style"), T = ee.get("annotations"), A = {
     name: oe,
     seqType: K,
