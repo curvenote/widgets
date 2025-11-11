@@ -43,21 +43,44 @@ function makePlaceholder(data, description) {
 var seqVizDirective = {
   name: "seqviz",
   doc: "A directive that will load seqparse compatible files and setup visualization using the SegViz library.",
-  arg: { type: String, doc: "The path to the file to load and parse.`" },
+  arg: {
+    type: String,
+    doc: "The path to the file to load and parse or an accession number.`"
+  },
+  body: {
+    type: String,
+    doc: `The body of the directive, if provided, it's fields will be used to populate the SeqViz model. In the 
+    case an accession number or file path is provided, the the data in the body will override the data from the 
+    file on a field by field basis.`
+  },
   options: {
     height: { type: String, doc: "The height of the visualization.`" },
-    class: { type: String, doc: "The tailwind classes to apply.`" }
+    class: { type: String, doc: "The tailwind classes to apply.`" },
+    viewer: {
+      type: String,
+      doc: "The viewer to use (linear, circular, both, both_flip).`"
+    },
+    zoom: {
+      type: Object,
+      doc: "The zoom to apply to the visualization e.g. ({ circular: 100, linear: 100 }).`"
+    },
+    style: { type: Object, doc: "The style to apply to the visualization.`" }
   },
-  run(data, vfile) {
+  // TODO: validate(data, vfile) {},
+  run(data, _vfile, _opts) {
     const block = u(
       "block",
       {
         kind: "seqviz",
         data: {
           import: "https://curvenote.github.io/widgets/widgets/seqviz.js",
-          file: data.arg,
+          fileOrAccession: data.arg,
+          body: data.body,
           class: data.options?.class ?? "",
-          height: data.options?.height ?? "600px"
+          height: data.options?.height ?? "600px",
+          viewer: data.options?.viewer ?? "both",
+          zoom: data.options?.zoom ?? { circular: 0, linear: 50 },
+          style: data.options?.style ?? {}
         }
       },
       makePlaceholder(data, data.arg)
@@ -67,7 +90,7 @@ var seqVizDirective = {
 };
 
 // src/transform.ts
-import * as seqparse from "seqparse";
+import seqparse from "seqparse";
 import { readFile } from "node:fs/promises";
 var seqparseTransform = {
   name: "seqviz-seqparse",
@@ -77,19 +100,46 @@ var seqparseTransform = {
     const nodes = utils.selectAll("block[kind='seqviz']", node) ?? [];
     await Promise.all(
       nodes.map(async (seqvizNode) => {
-        const { file, class: className, height } = seqvizNode.data;
-        const fileContent = await readFile(file, "utf8");
-        const data = seqparse.parseFile(fileContent);
-        const { name, type, seq, annotations } = data[0] ?? {};
+        const {
+          fileOrAccession,
+          body,
+          class: className,
+          height,
+          viewer,
+          zoom,
+          style
+        } = seqvizNode.data;
+        const seqparseFn = seqparse.default;
+        let loadedSeqData;
+        try {
+          const fileContent = await readFile(fileOrAccession, "utf8");
+          const parsed = await seqparseFn(fileContent, {
+            fileName: fileOrAccession
+          });
+          loadedSeqData = parsed;
+        } catch (error) {
+          console.debug(`Could not locate file, may be an accession: ${error}`);
+          try {
+            const fetched = await seqparseFn(fileOrAccession);
+            loadedSeqData = fetched;
+          } catch (error2) {
+            console.error(`Error parsing file or accession: ${error2}`);
+            return;
+          }
+        }
+        if (!loadedSeqData) {
+          return;
+        }
         seqvizNode.data = {
           ...seqvizNode.data,
           json: {
-            name,
-            type,
-            seq,
-            annotations,
+            viewer,
+            zoom,
+            style,
             class: className,
-            height
+            height,
+            ...loadedSeqData,
+            ...body
           }
         };
         seqvizNode.kind = "any:bundle";

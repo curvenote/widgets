@@ -7,6 +7,10 @@ declare const plugin: {
             type: StringConstructor;
             doc: string;
         };
+        body: {
+            type: StringConstructor;
+            doc: string;
+        };
         options: {
             height: {
                 type: StringConstructor;
@@ -16,8 +20,20 @@ declare const plugin: {
                 type: StringConstructor;
                 doc: string;
             };
+            viewer: {
+                type: StringConstructor;
+                doc: string;
+            };
+            zoom: {
+                type: ObjectConstructor;
+                doc: string;
+            };
+            style: {
+                type: ObjectConstructor;
+                doc: string;
+            };
         };
-        run(data: any, vfile: any): ({
+        run(data: any, _vfile: any, _opts: any): ({
             type: "block";
             children: ({
                 type: "admonition";
@@ -73,9 +89,13 @@ declare const plugin: {
             kind: string;
             data: {
                 import: string;
-                file: any;
+                fileOrAccession: any;
+                body: any;
                 class: any;
                 height: any;
+                viewer: any;
+                zoom: any;
+                style: any;
             };
         })[];
     }[];
