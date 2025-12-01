@@ -17,7 +17,7 @@ export default defineConfig({
       formats: ["es"], // ESM output
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      // external: ["react", "react-dom"],
       output: {
         assetFileNames: "widget.[ext]", // Ensures CSS is named properly
       },
