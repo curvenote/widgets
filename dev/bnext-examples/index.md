@@ -12,7 +12,7 @@ The following examples are using some of bnextbio's datasets along with this wid
 
 ::::{figure}
 :label: fig:liposome
-:::{any:bundle} https://curvenote.github.io/widgets/widgets/vizarr-viewer.js
+:::{any:widget} https://curvenote.github.io/widgets/widgets/vizarr-viewer.js
 :class: w-full
 
 { "source": "https://data.test.nucleus.engineering/20250922-cephla-processing/20250925-PURE-01.zarr", "height": "600px" }

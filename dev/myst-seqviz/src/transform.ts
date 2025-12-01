@@ -56,7 +56,7 @@ export const seqparseTransform = {
             ...body,
           },
         };
-        seqvizNode.kind = "any:bundle";
+        seqvizNode.kind = "any:widget";
       })
     );
   },
