@@ -3,6 +3,7 @@ import * as vizarr from 'https://curvenote.github.io/widgets/widgets/vizarr-ome5
 
 export default {
   async render({ model, el }) {
+    console.debug('vizarr-viewer-ome5-beta:', vizarr);
     console.debug('vizarr-viewer:', el);
     console.debug('vizarr-viewer:', model.get('height'));
     console.debug('vizarr-viewer:', model.get('source'));
