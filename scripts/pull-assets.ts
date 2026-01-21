@@ -3,8 +3,8 @@
 /**
  * Asset Spider - Downloads a JavaScript/CSS asset and all its dependencies
  * 
- * Usage: npx tsx pull-vizarr.ts <url> [output-dir]
- * Example: npx tsx pull-vizarr.ts https://some.js ./vizarr-assets
+ * Usage: npx tsx pull-assets.ts <url> [output-dir]
+ * Example: npx tsx pull-assets.ts https://some-domain.com/dist/index.js ./pulled-assets
  */
 
 import * as fs from 'fs/promises';
