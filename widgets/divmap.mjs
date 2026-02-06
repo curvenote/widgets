@@ -129,6 +129,13 @@ export default {
 
     const numCols = Math.max(0, ...rows.map((r) => r.length));
 
+    const style = document.createElement('style');
+    style.textContent = `
+      .divmap-cell { transition: transform 0.15s ease; }
+      .divmap-cell:hover { transform: scale(1.1); z-index: 1; }
+    `;
+    el.appendChild(style);
+
     const grid = document.createElement('div');
     Object.assign(grid.style, {
       display: 'grid',
@@ -150,12 +157,14 @@ export default {
         cell.style.minWidth = '24px';
         cell.style.minHeight = '24px';
         cell.style.boxSizing = 'border-box';
+        cell.classList.add('divmap-cell');
         grid.appendChild(cell);
       }
     }
 
     el.appendChild(grid);
     return () => {
+      style.remove();
       grid.remove();
     };
   },
