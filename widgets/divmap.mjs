@@ -132,7 +132,7 @@ export default {
     const style = document.createElement('style');
     style.textContent = `
       .divmap-cell { transition: transform 0.15s ease; }
-      .divmap-cell:hover { transform: scale(1.1); z-index: 1; }
+      .divmap-cell:hover { transform: scale(1.5); z-index: 1; }
     `;
     el.appendChild(style);
 
